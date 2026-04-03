@@ -21,6 +21,8 @@ print(torch.__version__)
 print(torch.cuda.is_available())
 print("using {} device.".format(device))
 def create_file(train_type,batch_num, N_S_ratio,mask_type, cor_rate):
+    if not os.path.exists('./picture'):
+        os.mkdir('./picture')
     if os.path.exists('./picture/{}_{}_{}'.format(N_S_ratio,mask_type, cor_rate)):
         if os.path.exists('./picture/{}_{}_{}/{}'.format(N_S_ratio,mask_type, cor_rate,train_type)):
             if os.path.exists('./picture/{}_{}_{}/{}/batch_{}'.format(N_S_ratio,mask_type, cor_rate,train_type, batch_num)):
