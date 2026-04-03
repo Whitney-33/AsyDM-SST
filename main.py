@@ -164,12 +164,10 @@ class AsyncDSBRunner:
                 if epoch == opt.visual_epoch:
                     pred_x0 = self.compute_pred_x0(step, xt, pred, anomaly_mask=None, clip_denoise=opt.clip_denoise)
                     visua_and_save('Train', epoch, i, x1_orig, f'miss{6}', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
-                    visua_and_save('Train', epoch, i, x1_com, 'x1_com', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                     visua_and_save('Train', epoch, i, pred_x0, 'recons', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                     visua_and_save('Train', epoch, i, x0, 'ground_recons', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                 if (epoch > opt.visual_epoch and epoch % opt.visual_epoch == 0):
                     pred_x0 = self.compute_pred_x0(step, xt, pred, anomaly_mask=None, clip_denoise=opt.clip_denoise)
-                    visua_and_save('Train', epoch, i, x1_com, 'x1_com', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                     visua_and_save('Train', epoch, i, pred_x0, 'recons', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
             
             # Calculate the average loss per epoch
@@ -253,7 +251,6 @@ class AsyncDSBRunner:
                 if epoch == opt.visual_epoch:
                     visua_and_save('Test', epoch, i, x1_orig, f'valid_miss{6}', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                     visua_and_save('Test', epoch, i, x3, f'week', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
-                    visua_and_save('Test', epoch, i, x1_com, f'x1_com', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                     visua_and_save('Test', epoch, i, reconstructed_image, 'valid_recons', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                     visua_and_save('Test', epoch, i, x0, 'valid_ground_recons', opt.N_S_ratio, opt.mask_type, opt.corrup_rate)
                 if (epoch > opt.visual_epoch and epoch % opt.visual_epoch == 0):
