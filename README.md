@@ -2,7 +2,7 @@
 
 **AsyDM-SST** is the code repository for the Asynchronous Diffusion Model based on Schrödinger Bridge for Sea Surface Temperature Reconstruction.
 
-This project implements a diffusion-based model to reconstruct missing SST data caused by cloud cover. It incorporates cloud masks and anomaly detection for high-accuracy reconstruction and visualization, primarily focused on the South China Sea region.
+This project implements a diffusion-based model to reconstruct missing SST data caused by cloud cover. It incorporates cloud masks and anomaly detection for high-accuracy reconstruction and visualization.
 
 ## Environment Setup
 
