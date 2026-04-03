@@ -6,11 +6,13 @@ This project implements a diffusion-based model to reconstruct missing SST data 
 
 ## Environment Setup
 
+> **Note:** This environment has been tested on **Linux-64 (Ubuntu)**. Compatibility with other platforms is not guaranteed.
+
 All dependencies are listed in `environment.yml`. We recommend using Conda.
 
 ```bash
 # 1. Create and activate the environment
-conda env create -f environment.yml
+conda env create -f ./environment.yml
 conda activate dsb
 
 # 2. (Optional) Verify the environment
